@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+        section {
+            background-image: url("https://i.pinimg.com/736x/06/de/9f/06de9fcc1251a5a1a6f08a94bc05de1c.jpg");
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        ul li {
+            list-style: none;
+            margin: 0px 20px;
+            z-index: 200;
+            
+        }
+
+        ul li img {
+            display: flex;
+
+            align-items: center;
+        }
+
+        ul {
+            display: flex;
+            z-index: 200;
+        }
+        .container #img{
+            width: 500px;
+            height: 350px;
+            
+            padding: 10px 0px;
+
+        } 
+
+        .container,
+        .imgechange {
+            z-index: 500;
+        }
+        .imgechange ul li img{
+            width: 100px;
+        }
+
+
+
+      @media screen and (min-width:220px) and (max-width:767px) {
+        .container img{
+            width: 300px;
+        }
+        ul li {
+            
+            margin: 5px 10px;
+           
+        }
+    
+        .imgechange ul li img{
+            width: 40px;
+        }
+    }
+        
+      
+      @media screen and (min-width:768px) and (max-width:991px) {
+        .container img{
+            width: 500px;
+            
+        }
+        .imgechange ul li img{
+            width: 80px;
+        }
+        
+      }
+      /* @media screen and (min-width:1200px){
+        .container img{
+            width: 1000px;
+        }
+        
+      } */
+
+         
+        
+    </style>
+</head>
+
+<body>
+    <section class="id">
+        <div class="heading">
+            <h1>YAMAYA-BIKES</h1>
+        </div>
+        <div class="all">
+            <div class="container">
+                <img id="img" src="https://vehiclebazaar.online/wp-content/uploads/2021/07/00-24.png"  />
+            </div>
+            <div class="imgechange">
+                <ul>
+                    <li>
+                        <img src="ns200.png" onclick="ingchange('ns200.png')" />
+                    </li>
+                    <li>
+                        <img src="RS-200.png" onclick="ingchange('RS-200.png')" />
+                    </li>
+                    <li>
+                        <img src="one.png" onclick="ingchange('one.png')" />
+                    </li>
+                    <li>
+                        <img src="mt.png" onclick="ingchange('mt.png')" />
+                    </li>
+
+                    <li>
+                        <img src="rc.png" onclick="ingchange('rc.png')" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+        function ingchange(anything) {
+            document.getElementById("img").src = anything;
+        }
+    </script>
+</body>
+
+</html>
